@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Employee Designation</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+</style>
+</head>
+<body>
+<script>
+function emailFunction(){
+		var userValue=document.getElementById("emailId").value;
+		var namePattern="^[1-9]{1}[0-9]{3}$";
+		document.getElementById("validemail").style.color="red";
+	
+		if(!userValue.match(namePattern)){
+	
+			document.getElementById("validemail").innerHTML="enter correct user name";
+			return false;
+		}
+		else
+			document.getElementById("validemail").innerHTML="";
+		return true;
+	}
+	function passwordValidation(){
+		var userValue=document.getElementById("passwordId").value;
+	var namePattern="^[A-Za-z0-9@!#$&*]{8,}$";
+		document.getElementById("validPassword").style.color="red";
+		if(!userValue.match(namePattern)){
+	
+			document.getElementById("validPassword").innerHTML="enter correct password";
+			return false;
+		}
+		else
+			document.getElementById("validPassword").innerHTML="";
+		return true;
+	}
+	function submitButtonFunction(){
+	   var x=emailFunction();
+       var y=passwordValidation();	   
+	   if(x && y){
+	   return true;
+	   }
+	   else {
+	     return false;
+	   }
+	}
+</script>
+<div class="row">
+<div class="col-lg-12" style="height:100px;  font-size:68px; color:white; background-color:black;">
+<img style="float:right; height:100px;" src="../image/del.jpg">
+Employee Designation</div></div>
+<div class="row">
+<div class="col-lg-12" style="height:100px; background-color:#dedede">
+</div>
+</div>
+<div class="row">
+<div class="col-lg-2" style="height:200px; background-color:#dedede;"><center><br>
+   </div>
+<div class="col-lg-8" style="height:200px;">
+<center>
+<img style="float:center; padding-top:10px; height:200px;" src="../image/loginimage.png">
+</center></div>
+<div class="col-lg-2" style="height:200px; background-color:#dedede;"><center><br>
+   </div></div>
+
+<form onsubmit="return submitButtonFunction()">
+<div class="row">
+<div class="col-lg-2" style="height:100px; background-color:#dedede;"><center><br>
+   </div>
+<div class="col-lg-4" style="padding-left:430px"><center>
+<br>
+ <h4>   User-Id:
+</h4>
+	<center>
+</div>
+<div class="col-lg-4">
+<br>
+    <input type="text" id="emailId" placeholder="Enter Your User-Id"/>
+ <p id="validemail"></p>
+</div>   
+</div>  
+   
+<div class="row">
+<div class="col-lg-2" style="height:100px; background-color:#dedede;"><center><br>
+   </div>
+<div class="col-lg-4" style="padding-left:430px"><center>
+<br>
+  <h4>  Password:
+            </h4>
+	<center>
+</div>
+<div class="col-lg-4">
+<br>
+    <input type="password" id="passwordId" placeholder="Enter Your password"/>
+<p id="validPassword"></p>
+
+</div>
+  <div class="col-lg-2" style="height:200px; background-color:#dedede;"><center><br>
+   </div>
+</div>      
+<div class="row">
+<div class="col-lg-12"><center><br>
+    <input type="submit" value="LogIn"/>
+
+</div>   
+</div>                                                                                      
+</form> 
+<div class="col-lg-12" style="height:100px; background-color:#dedede;"><center><br>
+   </div>           
+</div>
+<div class="row">
+<div class="col-lg-12" style="height:100px;  font-size:18px; color:white; background-color:black; float:right;">
+
+<p>Deloitte refers to a Deloitte member firm, one of its related entities, or Deloitte Touche Tohmatsu Limited ("DTTL").
+Each Deloitte member firm is a separate legal entity and a member 
+of DTTL. DTTL does not provide services to clients. Please see www.deloitte.com/about to learn more.
+
+v.E.1</p></div></div>
+
+</body>
+</html>
